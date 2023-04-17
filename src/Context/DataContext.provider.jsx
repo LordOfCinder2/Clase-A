@@ -4,7 +4,7 @@ import categoriesData from '../api/data'
 export const DataContext = createContext()
 
 const initialState = {
-	categories: categoriesData.categories,
+	categories: categoriesData,
 	subcategories: [],
 }
 
