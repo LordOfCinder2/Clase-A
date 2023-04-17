@@ -1,0 +1,53 @@
+{
+	"categories": [
+		{
+			"id": 1,
+			"name": "Energias Renovables",
+			"description": "text",
+			"img": "energias"
+		},
+		{
+			"id": 2,
+			"name": "Eficiencia energetica",
+			"description": "text",
+			"img": "energias"
+		},
+		{
+			"id": 3,
+			"name": "Construccion Sustentable",
+			"description": "text",
+			"subcategories": [],
+			"img": "energias"
+		},
+		{
+			"id": 4,
+			"name": "Capacitaciones",
+			"description": "text",
+			"img": "energias"
+		},
+		{
+			"id": 5,
+			"name": "Categoria 5",
+			"description": "text",
+			"img": "img 5"
+		},
+		{
+			"id": 6,
+			"name": "Categoria 6",
+			"description": "text",
+			"img": "img 6"
+		},
+		{
+			"id": 7,
+			"name": "Categoria 7",
+			"description": "text",
+			"img": "img 7"
+		},
+		{
+			"id": 8,
+			"name": "Categoria 8",
+			"description": "text",
+			"img": "img 8"
+		}
+	]
+}
