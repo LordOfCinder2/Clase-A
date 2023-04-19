@@ -1,12 +1,12 @@
 import React from 'react'
 import CategoryCard from '../../Common/CategoryCard/CategoryCard'
 
-const Offers = ({ data }) => {
+const Offers = ({ categories, handleClick }) => {
 	return (
 		<div
 			className="categories-container"
 		>
-			{data.categories.map((category) => (
+			{categories.map((category) => (
 				<CategoryCard key={category.id} category={category} />
 			))}
 		</div>

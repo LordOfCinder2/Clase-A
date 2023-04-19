@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
-import dataCategories from '../../../api/data'
+import React, { useContext, useEffect, useState } from 'react'
 import Offers from './Offers'
+import { DataContext } from '../../../Context/DataContext.provider'
 
 const OffersContainer = () => {
-	const [data, setData] = useState({
-		categories: dataCategories.categories,
-	})
+	const {state, dispatch}= useContext(DataContext)
 
-	return <Offers data={data} />
+	useEffect(() => {
+		dispatch({type: "LOAD_SUBS", payload: [1,2,3,4]})
+	}, []);
+
+	return <Offers categories={state.subCategoriesSelected} />
 }
 
 export default OffersContainer

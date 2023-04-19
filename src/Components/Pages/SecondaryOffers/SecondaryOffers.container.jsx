@@ -1,23 +1,40 @@
-import React, { useEffect, useState } from 'react'
-import dataCategories from './../../../api/data'
-import { addSubCategories } from './../../../api/data'
-import { useParams } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import { DataContext } from '../../../Context/DataContext.provider'
+import Offers from '../Offers/Offers'
+import SecondaryOffers from './SecondaryOffers'
 
 const SecondaryOffersContainer = () => {
-	const [data, setData] = useState({
-		categories: dataCategories.categories,
-		subCategories: [],
-	})
+	const { state, dispatch } = useContext(DataContext)
+	const [hasClicked, setHasClicked] = useState(false)
+	const navigate = useNavigate()
 
- const {categoryId}=useParams()
+	const { categoryId } = useParams()
 
- useEffect(() => {
-  setData({...data, subCategories: addSubCategories(data.categories[categoryId].subs)})
- }, []);
+	const handleClick = (id) => {
+		navigate(`/category/${id}`)
+		setHasClicked(true)
+	}
 
-	return <div>
-  {console.log(data.subCategories)}
-  SecondaryOffersContainer</div>
+	useEffect(() => {
+		setHasClicked(false)
+		dispatch({
+			type: 'LOAD_SUBS',
+			payload: state.categories[categoryId - 1].subs,
+		})
+		{
+			console.log(state)
+		}
+	}, [hasClicked])
+
+	return (
+		<>
+			<SecondaryOffers
+				categories={state.subCategoriesSelected}
+				handleClick={handleClick}
+			/>
+		</>
+	)
 }
 
 export default SecondaryOffersContainer

@@ -1,11 +1,23 @@
-import React, { createContext } from 'react'
-import categoriesData from '../api/data'
+import React, { createContext, useReducer } from 'react'
+import data from '../api/db.json'
 
 export const DataContext = createContext()
 
 const initialState = {
-	categories: categoriesData,
-	subcategories: [],
+	categories: data.categories,
+	subCategoriesSelected: [],
+}
+
+const reducer = (state, action) => {
+	switch (action.type) {
+		case 'LOAD_SUBS':
+			let newArr = state.categories.filter((item) =>
+				action.payload.some((element) => item.id === element),
+			)
+			return { ...state, subCategoriesSelected: newArr }
+		default:
+			return state
+	}
 }
 
 const DataContextProvider = ({ children }) => {

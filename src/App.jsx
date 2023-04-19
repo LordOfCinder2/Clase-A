@@ -3,18 +3,24 @@ import './App.css'
 import Layout from './Components/Layout/Layout'
 import Home from './Components/Pages/Home/Home'
 import SecondaryOffersContainer from './Components/Pages/SecondaryOffers/SecondaryOffers.container'
+import DataContextProvider from './Context/DataContext.provider'
 
 function App() {
 	return (
 		<main className="App">
-			<BrowserRouter>
-				<Routes>
-						<Route path="/" element={<Home/>}/>
-					<Route element={<Layout />}>
-						<Route path="/category/:categoryId" element={<SecondaryOffersContainer/>}/>
-					</Route>
-				</Routes>
-			</BrowserRouter>
+			<DataContextProvider>
+				<BrowserRouter>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route element={<Layout />}>
+							<Route
+								path="/category/:categoryId"
+								element={<SecondaryOffersContainer />}
+							/>
+						</Route>
+					</Routes>
+				</BrowserRouter>
+			</DataContextProvider>
 		</main>
 	)
 }
