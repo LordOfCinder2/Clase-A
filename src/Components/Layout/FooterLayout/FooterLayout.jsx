@@ -1,11 +1,12 @@
 import React from 'react'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import './FooterLayout.css'
 
 const FooterLayout = () => {
 	return (
-		<footer className="contacto">
+		<footer className="contact">
 			<p>Contacto</p>
-			<WhatsAppIcon />
+			<WhatsAppIcon className='contact-icon'/>
 		</footer>
 	)
 }

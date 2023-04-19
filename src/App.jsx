@@ -7,7 +7,7 @@ import DataContextProvider from './Context/DataContext.provider'
 
 function App() {
 	return (
-		<main className="App">
+		<main className="app">
 			<DataContextProvider>
 				<BrowserRouter>
 					<Routes>

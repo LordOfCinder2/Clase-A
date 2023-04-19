@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { DataContext } from '../../../Context/DataContext.provider'
 import Offers from '../Offers/Offers'
-import SecondaryOffers from './SecondaryOffers'
 
 const SecondaryOffersContainer = () => {
 	const { state, dispatch } = useContext(DataContext)
@@ -22,7 +21,7 @@ const SecondaryOffersContainer = () => {
 
 	return (
 		<>
-			<SecondaryOffers
+			<Offers
 				categories={state.subCategoriesSelected}
 			/>
 		</>
