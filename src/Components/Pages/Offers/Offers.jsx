@@ -1,7 +1,7 @@
 import React from 'react'
 import CategoryCard from '../../Common/CategoryCard/CategoryCard'
 
-const Offers = ({ categories, handleClick }) => {
+const Offers = ({ categories }) => {
 	return (
 		<div
 			className="categories-container"

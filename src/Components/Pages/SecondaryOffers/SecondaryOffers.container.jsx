@@ -6,18 +6,11 @@ import SecondaryOffers from './SecondaryOffers'
 
 const SecondaryOffersContainer = () => {
 	const { state, dispatch } = useContext(DataContext)
-	const [hasClicked, setHasClicked] = useState(false)
-	const navigate = useNavigate()
 
 	const { categoryId } = useParams()
 
-	const handleClick = (id) => {
-		navigate(`/category/${id}`)
-		setHasClicked(true)
-	}
 
 	useEffect(() => {
-		setHasClicked(false)
 		dispatch({
 			type: 'LOAD_SUBS',
 			payload: state.categories[categoryId - 1].subs,
@@ -25,13 +18,12 @@ const SecondaryOffersContainer = () => {
 		{
 			console.log(state)
 		}
-	}, [hasClicked])
+	}, [categoryId])
 
 	return (
 		<>
 			<SecondaryOffers
 				categories={state.subCategoriesSelected}
-				handleClick={handleClick}
 			/>
 		</>
 	)
