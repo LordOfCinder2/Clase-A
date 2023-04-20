@@ -7,12 +7,12 @@ import './Home.css'
 const Home = () => {
 	return (
 		<main className="home">
-			<div>
+			<div className="home-header">
 				<div>
 					<img src="/src/assets/claseA.jpg" alt="logo" />
 				</div>
-				<p>
-					<LocationOnIcon /> Estamos en la comarca andina
+				<p className='location-text'>
+					<LocationOnIcon className='location-icon' color='' fontSize=''/> Estamos en la comarca andina
 				</p>
 			</div>
 			<OffersContainer />

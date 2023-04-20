@@ -1,5 +1,6 @@
 import React from 'react'
 import CategoryCard from '../../Common/CategoryCard/CategoryCard'
+import './Offers.css'
 
 const Offers = ({ categories }) => {
 	return (

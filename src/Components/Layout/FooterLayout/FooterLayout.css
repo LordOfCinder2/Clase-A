@@ -1,4 +1,17 @@
 .contact {
-	border: 1px solid black;
-	max-width: 1000px;
+	min-width: 95%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 2rem;
+	font-family: 'bank-gothic-regular', sans-serif;
+	background-color: #727171;
+	color: white;
+	align-items: center;
+	padding: 1rem;
+	border-radius: 1.5rem;
+}
+
+.contact:hover {
+	background-color: #595959;
+	cursor: pointer;
 }
