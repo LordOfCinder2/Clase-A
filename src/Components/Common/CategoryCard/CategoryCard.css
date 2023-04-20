@@ -5,13 +5,17 @@
  align-items: center;
  margin: .3rem 0;
  border-radius: 1.5rem;
- height: 5rem;
+ height: 6rem;
  overflow: hidden;
  text-decoration: none;
+ color: black;
+ background-image: linear-gradient(#ffffff 30%,#727272);
+ background-repeat: no-repeat;
+ background-attachment: fixed;
 }
-.category-card:nth-child(even){
+/* .category-card:nth-child(even){
  flex-direction: row-reverse;
-}
+} */
 .category-card:visited{
  color: black;
 }
@@ -19,8 +23,7 @@
  position: relative;
  border: 1px solid black;
  width: 50%;
-}
-.card-title{
+ font-size: 2rem;
 }
 .img-container {
  width: 50%;
