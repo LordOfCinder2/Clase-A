@@ -3,6 +3,7 @@ import { DataContext } from '../../../Context/DataContext.provider'
 import { useNavigate, useParams } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home'
 import { IconButton } from '@mui/material'
+import './HeaderLayout.css'
 
 const HeaderLayout = () => {
 	const { state } = useContext(DataContext)
@@ -21,13 +22,13 @@ const HeaderLayout = () => {
 	}, [categoryId])
 
 	return (
-		<header className="header">
-			<img src={data.img} alt="" style={{ width: '150px' }} />
-			<h1>{data.name}</h1>
-			<p>{data.description}</p>
-			{console.log(data)}
-			<IconButton onClick={() => navigate('/')}>
-				<HomeIcon />
+		<header className="header" style={{ backgroundImage: `url(${data.img})` }}>
+			<div className='header-text'>
+				<h1>{data.name}</h1>
+				<p>{data.description}</p>
+			</div>
+			<IconButton className='home-button' color='' fontSize='' onClick={() => navigate('/')}>
+				<HomeIcon className='home-button-icon' color='' fontSize=''/>
 			</IconButton>
 		</header>
 	)

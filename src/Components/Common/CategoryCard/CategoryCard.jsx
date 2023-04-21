@@ -6,8 +6,8 @@ const CategoryCard = ({ category }) => {
 	return (
 			<Link to={`/category/${category.id}`} className="category-card">
 				<div className='card-title'>{category.name}</div>
-				<div className='img-container'>
-					<img src={category.img} alt="img" />
+				<div className='img-container' style={{backgroundImage:`url(${category.img})`}}>
+					{/* <img src={category.img} alt="img" /> */}
 				</div>
 			</Link>
 	)

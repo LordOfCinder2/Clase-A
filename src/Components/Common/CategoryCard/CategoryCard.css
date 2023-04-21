@@ -1,31 +1,42 @@
-.category-card{
- display: flex;
- justify-content: space-around;
- border: 2px solid black;
- align-items: center;
- margin: .3rem 0;
- border-radius: 1.5rem;
- height: 6rem;
- overflow: hidden;
- text-decoration: none;
- color: black;
- background-image: linear-gradient(#ffffff 30%,#727272);
- background-repeat: no-repeat;
- background-attachment: fixed;
+.category-card {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0.3rem 0;
+	border-radius: 1.5rem;
+	height: 8rem;
+	overflow: hidden;
+	text-decoration: none;
+	color: black;
+	background-image: linear-gradient(var(--gradient-start) 30%, var(--gradient-end) 90%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
-/* .category-card:nth-child(even){
- flex-direction: row-reverse;
-} */
-.category-card:visited{
- color: black;
+.category-card:nth-child(even) {
+	flex-direction: row-reverse;
 }
-.card-title{
- position: relative;
- border: 1px solid black;
- width: 50%;
- font-size: 2rem;
+.category-card:visited {
+	color: black;
+}
+.category-card:hover {
+	background: var(--primary-green);
+ color: white;
+}
+.card-title {
+	position: relative;
+	width: 50%;
+	font-size: 2rem;
+	padding: 2rem;
 }
 .img-container {
- width: 50%;
+	height: 8rem;
+	width: 50%;
+	max-height: 100%;
+	clip-path: polygon(4rem 50%, 0 0, 100% 0, 100% 100%, 0 100%);
+	background-size: cover;
+	background-position: 0 50%;
+	background-repeat: no-repeat;
 }
-
+.category-card:nth-child(even) .img-container {
+	clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%);
+}

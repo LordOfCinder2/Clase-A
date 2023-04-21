@@ -12,3 +12,10 @@
 	font-family: bank-gothic-bold;
 	src: url(/src/assets/BankGothic\ Bold/BankGothic\ Bold.ttf);
 }
+
+:root{
+	--primary-green: #9bbb59;
+	--primary-grey: #595959;
+	--gradient-start: #ffffff;
+	--gradient-end: #595959;
+}

@@ -1,0 +1,43 @@
+.header {
+ position: relative;
+	background-size: cover;
+	background-position: 0 50%;
+	padding-top: 10rem;
+ border-radius: 1rem 1rem 0 0;
+ width: 95%;
+}
+.header-text {
+	background: rgba(255, 255, 255, 0.44);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8px);
+ padding: 1rem;
+ width: 50%;
+margin: 0 0 1rem 1rem
+}
+.header h1 {
+	font-family: bank-gothic-bold;
+}
+.header p {
+	font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+.header .home-button{
+ position: absolute;
+ top: 1rem;
+ right: 1rem;
+ color: var(--primary-green);
+ background: rgba(255, 255, 255, 0.44);
+border-radius: 50%;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8px);
+}
+.header .home-button:hover{
+ background: #00000070;
+border-radius: 50%;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8px);
+}
+.home-button-icon{
+ font-size: 3rem;
+ color: var(--primary-green);
+}

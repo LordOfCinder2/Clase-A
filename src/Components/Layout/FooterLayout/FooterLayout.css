@@ -4,9 +4,10 @@
 	justify-content: space-between;
 	font-size: 2rem;
 	font-family: 'bank-gothic-regular', sans-serif;
-	background-image: linear-gradient(#ffffff,#727272);
+	/* background-image: linear-gradient(#ffffff,#727272);
  background-repeat: no-repeat;
- background-attachment: fixed;
+ background-attachment: fixed; */
+	background-color: var(--primary-grey);
 	color: white;
 	align-items: center;
 	padding: 1rem;
@@ -14,6 +15,6 @@
 }
 
 .contact:hover {
-	background-color: #595959;
+	background-color: var(--primary-green);
 	cursor: pointer;
 }
