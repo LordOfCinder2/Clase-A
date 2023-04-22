@@ -6,11 +6,11 @@
 
 @font-face {
 	font-family: bank-gothic-regular;
-	src: url(/src/assets/BankGothic\ Regular/BankGothic\ Regular.ttf);
+	src: url(/public/font/BankGothicRegular.ttf);
 }
 @font-face {
 	font-family: bank-gothic-bold;
-	src: url(/src/assets/BankGothic\ Bold/BankGothic\ Bold.ttf);
+	src: url(/public/font/BankGothicBold.ttf);
 }
 
 :root{

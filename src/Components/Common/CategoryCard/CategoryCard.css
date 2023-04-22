@@ -8,7 +8,10 @@
 	overflow: hidden;
 	text-decoration: none;
 	color: black;
-	background-image: linear-gradient(var(--gradient-start) 30%, var(--gradient-end) 90%);
+	background-image: linear-gradient(
+		var(--gradient-start) 15%,
+		var(--gradient-end) 90%
+	);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -20,23 +23,32 @@
 }
 .category-card:hover {
 	background: var(--primary-green);
- color: white;
+	box-shadow: 9px 10px 44px -1px rgba(0, 0, 0, 0.63);
+	color: white;
 }
 .card-title {
 	position: relative;
 	width: 50%;
-	font-size: 2rem;
-	padding: 2rem;
+	font-size: 1.7rem;
+	text-align: center;
 }
 .img-container {
 	height: 8rem;
 	width: 50%;
 	max-height: 100%;
-	clip-path: polygon(4rem 50%, 0 0, 100% 0, 100% 100%, 0 100%);
 	background-size: cover;
 	background-position: 0 50%;
 	background-repeat: no-repeat;
 }
+.category-card:nth-child(odd) .img-container {
+	clip-path: polygon(4rem 50%, 0 0, 100% 0, 100% 100%, 0 100%);
+}
 .category-card:nth-child(even) .img-container {
-	clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%);
+	clip-path: polygon(0% 0%, 100% 0, calc(100% - 4rem) 50%, 100% 100%, 0% 100%);
+}
+
+@media screen and (max-width: 600px) {
+	.card-title {
+		font-size: 1.3rem;
+	}
 }

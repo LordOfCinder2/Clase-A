@@ -8,9 +8,7 @@ const Home = () => {
 	return (
 		<main className="home">
 			<div className="home-header">
-				<div className="logo-container">
-					<img src="/src/assets/claseA.jpg" alt="logo" />
-				</div>
+				<div className="logo-container"></div>
 				<p className="location-text">
 					<LocationOnIcon className="location-icon" color="" fontSize="" /> Estamos
 					en la comarca andina
